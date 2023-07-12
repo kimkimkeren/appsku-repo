@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: appsku
+spec:
+  selector:
+    matchLabels:
+      app: appsku
+  template:
+    metadata:
+      labels:
+        app: appsku
+    spec:
+      containers:
+      - name: ct-appsku
+        image: idndevops/apps-games
+        ports:
+        - containerPort: 80
